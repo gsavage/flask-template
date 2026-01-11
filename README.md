@@ -23,5 +23,5 @@ You need python3 and make installed.
 3. Run the dev server
 
   ```bash
-  make deb
+  make dev
   ```
