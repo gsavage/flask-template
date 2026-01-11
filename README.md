@@ -14,14 +14,14 @@ You need python3 and make installed.
   make init
   ```
 
-1. Run tests
+2. Run tests
 
-   ```bash
-   make test
-   ```
+  ```bash
+  make test
+  ```
 
-2. Run the dev server
+3. Run the dev server
 
-   ```bash
-   make deb
-   ```
+  ```bash
+  make deb
+  ```
