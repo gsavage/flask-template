@@ -4,9 +4,16 @@ class Calc:
 
         sub_total = number_of_items * price_per_item
 
-        total = sub_total + self.sales_tax(sub_total, state_code)
+        discount = self.sales_discount(sub_total)
+
+        sub_sub_total = sub_total - discount
+
+        total = sub_sub_total + self.sales_tax(sub_sub_total, state_code)
 
         return [total, number_of_items, price_per_item, state_code]
+
+    def sales_discount(self, sub_total):
+        return 0
 
     def sales_tax(self, sub_total, state_code):
 
