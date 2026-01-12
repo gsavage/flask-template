@@ -24,3 +24,7 @@ clean:
 	rm -rf $(VENV)
 	find . -type f -name *.pyc -delete
 	find . -type d -name __pycache__ -delete
+
+.PHONY: demo
+demo:
+	$(BIN)/python src/cli.py
