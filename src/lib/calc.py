@@ -12,7 +12,15 @@ class Calc:
 
         total = sub_total + tax
 
-        return [total, number_of_items, price_per_item, state_code, order_value, discount, tax]
+        return {
+                "total": total,
+                "number_of_items": number_of_items,
+                "price_per_item": price_per_item,
+                "state_code": state_code,
+                "order_value": order_value,
+                "discount": discount,
+                "tax": tax
+                 }
 
     def sales_discount(self, order_value):
         if order_value >= 50000:
