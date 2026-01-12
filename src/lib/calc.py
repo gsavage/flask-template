@@ -13,7 +13,7 @@ class Calc:
         return [total, number_of_items, price_per_item, state_code]
 
     def sales_discount(self, sub_total):
-        return 0
+        return 0.5
 
     def sales_tax(self, sub_total, state_code):
 

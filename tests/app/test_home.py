@@ -17,7 +17,7 @@ def test_a0_02():
 
     total = c.calc(2, 3, "UT")
 
-    assert total[0] == 6.411 # First item is the result
+    assert total[0] == 5.87675 # First item is the result
     assert total[1] == 2 # Next is the number of items
     assert total[2] == 3 # Next is the price per item
     assert total[3] == "UT" # Finally, here is the state code
@@ -28,7 +28,7 @@ def test_a0_03():
 
     total = c.calc(2, 3, "CA")
 
-    assert total[0] == 6.495 # First item is the result
+    assert total[0] == 5.95375 # First item is the result
     assert total[1] == 2 # Next is the number of items
     assert total[2] == 3 # Next is the price per item
     assert total[3] == "CA" # Finally, here is the state code
