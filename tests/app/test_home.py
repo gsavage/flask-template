@@ -14,5 +14,8 @@ def test_a0_01():
 def test_a0_02():
     """Calc exists"""
     c = Calc()
-    total = c.calc(1, 1, "UT")
-    assert total == 1
+    total = c.calc(1, 2, "UT")
+    assert total[0] == 1 # First item is the result
+    assert total[1] == 1 # Next is the first input
+    assert total[2] == 2 # Next is the second input
+    assert total[3] == "UT" # Finally, here is the state code
