@@ -45,6 +45,11 @@ class Calc:
                 "AL": 0.04,
                 "CA": 0.0825
                 }
-        return sub_total * taxes[state_code]
+        tax_rate = taxes.get(state_code, -1)
+        if tax_rate == -1:
+            print(f"{state_code} is not a known state")
+            exit(1)
+
+        return sub_total * tax_rate
 
 
