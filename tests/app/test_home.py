@@ -14,7 +14,9 @@ def test_a0_01():
 def test_a0_02():
     """Returns price * count"""
     c = Calc()
+
     total = c.calc(2, 3, "UT")
+
     assert total[0] == 6 # First item is the result
     assert total[1] == 2 # Next is the number of items
     assert total[2] == 3 # Next is the price per item
