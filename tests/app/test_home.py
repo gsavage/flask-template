@@ -21,3 +21,14 @@ def test_a0_02():
     assert total[1] == 2 # Next is the number of items
     assert total[2] == 3 # Next is the price per item
     assert total[3] == "UT" # Finally, here is the state code
+
+def test_a0_03():
+    """Returns price * count"""
+    c = Calc()
+
+    total = c.calc(2, 3, "CA")
+
+    assert total[0] == 6.495 # First item is the result
+    assert total[1] == 2 # Next is the number of items
+    assert total[2] == 3 # Next is the price per item
+    assert total[3] == "CA" # Finally, here is the state code
