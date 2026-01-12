@@ -9,5 +9,10 @@ class Calc:
         return [total, number_of_items, price_per_item, state_code]
 
     def sales_tax(self, sub_total, state_code):
-        return sub_total * 0.0685
+
+        taxes = {
+                "UT": 0.0685
+                }
+        return sub_total * taxes[state_code]
+
 
