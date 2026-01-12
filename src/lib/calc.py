@@ -15,8 +15,16 @@ class Calc:
     def sales_discount(self, order_value):
         if order_value >= 50000:
             return order_value * 0.15
-
-        return 0.5
+        elif order_value >= 10000:
+            return order_value * 0.1
+        elif order_value >= 7000:
+            return order_value * 0.07
+        elif order_value >= 5000:
+            return order_value * 0.05
+        elif order_value >= 1000:
+            return order_value * 0.03
+        else:
+            return 0
 
     def sales_tax(self, sub_total, state_code):
 
