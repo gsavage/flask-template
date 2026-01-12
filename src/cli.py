@@ -1,5 +1,6 @@
 from lib.calc import Calc
 
+
 class InputValidator:
     def validate(self, input):
         try:
@@ -7,6 +8,7 @@ class InputValidator:
         except ValueError:
             print(f"{input} is not a number")
             exit(1)
+
 
 if __name__ == "__main__":
     validator = InputValidator()

@@ -13,14 +13,14 @@ class Calc:
         total = sub_total + tax
 
         return {
-                "total": total,
-                "number_of_items": number_of_items,
-                "price_per_item": price_per_item,
-                "state_code": state_code,
-                "order_value": order_value,
-                "discount": discount,
-                "tax": tax
-                 }
+            "total": total,
+            "number_of_items": number_of_items,
+            "price_per_item": price_per_item,
+            "state_code": state_code,
+            "order_value": order_value,
+            "discount": discount,
+            "tax": tax,
+        }
 
     def sales_discount(self, order_value):
         if order_value >= 50000:
@@ -38,18 +38,10 @@ class Calc:
 
     def sales_tax(self, sub_total, state_code):
 
-        taxes = {
-                "UT": 0.0685,
-                "NV": 0.08,
-                "TX": 0.0625,
-                "AL": 0.04,
-                "CA": 0.0825
-                }
+        taxes = {"UT": 0.0685, "NV": 0.08, "TX": 0.0625, "AL": 0.04, "CA": 0.0825}
         tax_rate = taxes.get(state_code, -1)
         if tax_rate == -1:
             print(f"{state_code} is not a known state.  Must be one of {taxes.keys()}")
             exit(1)
 
         return sub_total * tax_rate
-
-

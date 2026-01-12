@@ -27,4 +27,4 @@ clean:
 
 .PHONY: demo
 demo:
-	$(BIN)/python src/cli.py
+	@$(BIN)/python src/cli.py

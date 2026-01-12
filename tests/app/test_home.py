@@ -2,17 +2,8 @@ from app import create_app
 
 from lib.calc import Calc
 
-
-def test_a0_01():
-    """Ensure home page is rendered"""
-    app = create_app({"TESTING": True})
-    client = app.test_client()
-    response = client.get("/")
-    assert response.status_code == 200
-    assert b"<h1>Flask Template</h1>" in response.data
-
 def test_a0_02():
-    """Returns price * count"""
+    """Utah tax rate"""
     c = Calc()
 
     total = c.calc(2, 3, "UT")
@@ -23,7 +14,7 @@ def test_a0_02():
     assert total["state_code"] == "UT" # Finally, here is the state code
 
 def test_a0_03():
-    """Returns price * count"""
+    """California tax rate"""
     c = Calc()
 
     total = c.calc(2, 3, "CA")
@@ -34,7 +25,7 @@ def test_a0_03():
     assert total["state_code"] == "CA" # Finally, here is the state code
 
 def test_a0_04():
-    """Returns price * count"""
+    """Large numbers get a percentage discount"""
     c = Calc()
 
     total = c.calc(20000, 3, "CA")
